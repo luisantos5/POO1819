@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exc2</title>
+</head>
+<body>
+    <script>
+        //a
+        const student = {
+            name: "David Silva",
+            couser: "POO",
+            grade: 12
+        }
+        listObjProperites() // vai retornar name, course, grade
+        
+        removeGrade() //c)
+
+        calcObjectSize() //d
+
+        
+        //b
+        function listObjProperites() {
+            for(const prop in student) {
+                console.log(prop)  // variaveis
+                //extra exerccicio
+                console.log(student[prop]) // valores das variaveis
+            }
+        }
+        //c
+        function removeGrade() {
+            delete student.grade 
+        }
+
+        //d
+        function calcObjectSize() {
+            let cont = 0
+            for(const prop in student) {
+                cont ++
+            }
+            console.log(cont)
+        }
+
+    </script>
+</body>
+</html>
