@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>VidioTeca</h1>
+    <form id="frmMovie">
+        <!--Nome do filme-->
+        <label for="txtMovieTitle">Título do Filme</label>
+        <input id="txtMovieTitle" type="text" required>
+        <br>
+        <!--Ano do filme-->
+        <label for="txtMovieYear">Ano do Filme</label>
+        <input id="txtMovieYear" type="number" min="1900" max="" required>
+        <br>
+        <!--Género do filme-->
+        <label for="txtMovieGenre">Género do Filme</label>
+        <select id="txtMovieGenre">
+            <option value="acao">Ação</option>
+            <option value="aventura">Aventura</option>
+            <option value="comedia" selected>Comédia</option>
+            <option value="terror">Terror</option>
+            <option value="romance">Romance</option>
+            <option value="thriller">Thriller</option>
+            <option value="outro">Outro</option>
+        </select>
+        <br>
+        <!--Capa do filme-->
+        <label for="txtMovieCover">Capa do Filme</label>
+        <input id="txtMovieCover" type="url" required>
+        <br>
+        <!--Trailer do filme-->
+        <label for="txtMovieTrailer">Trailer do Filme</label>
+        <input id="txtMovieTrailer" type="url">
+        <br>
+        <!--Botões-->
+        <input type="submit" value="ADICIONAR">
+        <input type="reset" value="REPOR">
+        <br>
+    </form>
+    <hr>
+    <table>
+        
+    </table>
+    <dialog id="dlgCover"></dialog>
+
+    <script src="exc7.js"></script>
+</body>
+</html>
