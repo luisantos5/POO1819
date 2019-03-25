@@ -90,7 +90,7 @@ function renderTable(){
 function showCover(txtMovieCover)
 {
     const dialog = document.querySelector("#dlgCover")
-    const p = dialog.querySelector("p") 
-    p.innerHTML = "blablabla"
+    const img = dialog.querySelector("img") 
+    img.src = 
     dialog.showModal();
 }
