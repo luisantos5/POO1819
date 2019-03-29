@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exc7</title>
+</head>
+<body>
+    <h1>VIDEOTECA</h1>
+    <!--Formulário para inserir filmes-->
+    <form>
+        <label for="txtTitle">Título:</label>
+        <input id= "txtTitle" type="text" required>
+
+        <label for="sltGenre">Gênero:</label>
+        <select id="sltGenre">
+            <option value="aventura">Aventura</option>
+            <option value="acao">Ação</option>
+        </select>
+
+        <label for="txtYear">Ano</label>
+        <input id= "txtYear" type="number" min="1990" max="" required>
+
+        <label for="txtCover">Capa:</label>
+        <input id= "txtCover" type="text" required>
+
+        <label for="txtTrailer">Trailer:</label>
+        <input id= "txtTrailer" type="text" required>
+
+        <input type="submit" value="Adicionar">
+        <input type="reset" value="Limpar">
+
+    </form>
+    <hr>
+    <!--TAbela que vai aoresentar o array-->
+    <table>
+
+    </table>
+
+    <!--Janela para mostrar a capa-->
+    <dialog id="dlgCover">
+        <img id="imgCover" src="" alt="">
+        <br>
+        <button id="btnCloseCover">FECHAR</button>
+    </dialog>
+
+    <script src="ex7.js"></script>
+</body>
+</html>
