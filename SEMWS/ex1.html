@@ -1,0 +1,34 @@
+<!--EXERCICIO DE EXEMPLO SEMINÁRIO WEB STORAGE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex1.html</title>
+</head>
+<body>
+        <select id="sltschools">
+            <option value="ESMAD">Esmad</option>
+            <option value="ISEP">ISEP</option>
+            <option value="ESHT">ESHT</option>
+            <option value="ISCAP">ISCAP</option>
+            <option value="ESE">ESE</option>    
+        </select>
+        <button name="btnSelect">Select</button>
+
+        <script>
+            const sltschools = document.querySelector("select")
+            const btnSelect = document.querySelector("button")
+
+            if (localStorage.getItem("school")) {
+                sltschools.value = localStorage.getItem("school")
+            }
+
+            btnSelect.addEventListener("click", function(){
+                localStorage.setItem("school", sltschools.value)
+            })
+
+        </script>
+</body>
+</html>
