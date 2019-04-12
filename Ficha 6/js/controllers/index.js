@@ -1,17 +1,37 @@
 import { bands } from "../models/main.js"
 
 const myCatalog = document.querySelector("#myCatalog")
+const btnFilter = document.querySelector("#btnFilter")
+btnFilter.addEventListener("click", function(){
+    const txtName = document.querySelector("#txtName").value 
+    const sltGenre = document.querySelector("#sltGenre").value
+    renderCatalog(txtName, sltGenre)
+})
 
-//Tratamento filtrso
+renderCatalog()
+
+/**
+ * 
+ * @param {string} txtName Nome da banda
+ * @param {string} sltGenre Genero de musica que a banda 
+ */
 
 
 
-function renderCatalog(filterGenre , filterName) {
+function renderCatalog(txtName ="", sltGenre ="") {
     let result = ""
     let i = 0
     for (const band of bands) {
 
-        if (filterGenre!=="" && filterGenre!==band.genre) continue
+        if ((sltGenre!=="" && band.genre !==sltGenre) 
+            ||
+            (txtName!=="" && !band.name.startsWith(txtName)) 
+            ) {
+                continue
+            
+        }
+
+        /* if (filterGenre!=="" && filterGenre!==band.genre) continue */
 
         if (i % 3 == 0) {
             result += `<div class="row">`
