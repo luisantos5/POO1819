@@ -4,6 +4,7 @@ import User from "./user.js"
 // Array para guardar os objetos Band
 let mons = []
 //export default mons
+
 if (localStorage.getItem("mons")) {
     mons = JSON.parse(localStorage.getItem("mons"))  //IMPORTANTE 
     /* 
