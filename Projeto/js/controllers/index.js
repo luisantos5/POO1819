@@ -1,4 +1,4 @@
-import { bands } from "../models/main.js"
+import { Mons } from "../models/main.js"
 
 const myCatalog = document.querySelector("#myCatalog")
 const btnFilter = document.querySelector("#btnFilter")
