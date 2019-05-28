@@ -1,9 +1,9 @@
-import mon from "../models/mon.js"
+import Mon from "./mon"
 import User from "./user.js"
 
 // Array para guardar os objetos Band
-let mons = []
-//export default mons
+export let mons = []
+
 
 if (localStorage.getItem("mons")) {
     mons = JSON.parse(localStorage.getItem("mons"))  //IMPORTANTE 

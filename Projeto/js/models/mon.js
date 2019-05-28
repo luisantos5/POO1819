@@ -1,7 +1,7 @@
 /**
  * Classe para modelar um monumento
  */
- export default class mon {
+ export default class Mon {
      constructor(name, genre, photo, description) {
          this.name = name
          this.genre = genre
