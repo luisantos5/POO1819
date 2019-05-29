@@ -1,4 +1,4 @@
-import Mon from "./mon"
+import Mon from "./mon.js"
 import User from "./user.js"
 
 // Array para guardar os objetos Band

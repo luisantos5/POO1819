@@ -1,4 +1,4 @@
-import { Mons } from "../models/main.js"
+import { mons } from "../models/main.js"
 
 const myCatalog = document.querySelector("#myCatalog")
 const btnFilter = document.querySelector("#btnFilter")
@@ -12,7 +12,7 @@ renderCatalog()
 
 /**
  * 
- * @param {string} txtName Nome da banda
+ * @param {string} txtName Nome do monumento
  * @param {string} sltGenre Genero de musica que a banda 
  */
 
@@ -21,31 +21,31 @@ renderCatalog()
 function renderCatalog(txtName ="", sltGenre ="") {
     let result = ""
     let i = 0
-    for (const band of bands) {
+    for (const mon of mons) {
 
-        if ((sltGenre !=="" && band.genre !==sltGenre) 
+        if ((sltGenre !=="" && mon.genre !==sltGenre) 
             ||
-            (txtName !=="" && !band.name.startsWith(txtName)) 
+            (txtName !=="" && !mon.name.startsWith(txtName)) 
             ) {
                 continue
             
         }
         
 
-        /* if (filterGenre!=="" && filterGenre!==band.genre) continue */
+        
         //Criação de linha
         if (i % 3 == 0) {
             result += `<div class="row">`
         }
-        console.log(band.name)
+        console.log(mon.name)
         //Geração do card
         result += `
         <div class="col-sm-4">
         <div class="card">
-                <img src="${band.photo}" class="card-img-top">
+                <img src="${mon.photo}" class="card-img-top">
                 <div class="card-body">
-                <h5 class="card-title">${band.name}</h5>
-                <p class="card-text">${band.genre}</p>
+                <h5 class="card-title">${mon.name}</h5>
+                <p class="card-text">${mon.genre}</p>
                 <a href="#" class="btn btn-success">Ver mais</a>
                 <a href="#" class="btn btn-danger">Remover</a>
                 </div>
