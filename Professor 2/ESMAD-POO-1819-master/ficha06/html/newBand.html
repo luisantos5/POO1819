@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Add band</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    </nav>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-3">New band</h1>
+            <p class="lead">Add a band that you enjoy!</p>
+            <hr class="my-2">
+            <p>
+                <form id="frmAddBand">
+                    <div class="form-group">
+                        <label for="txtName">Name</label>
+                        <input type="text" class="form-control" id="txtName" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-3">
+                            <label for="sltGenre">Genre</label>
+                            <select class="form-control" id="sltGenre">
+                                <option value="Jazz">Jazz</option>
+                                <option value="Metal">Metal</option>
+                                <option value="Pop-Rock">Pop-Rock</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtDescription">Description</label>
+                        <textarea class="form-control" id="txtDescription" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPhoto">Photo link</label>
+                        <input type="url" class="form-control" id="txtPhoto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtVideo">Video Clip link</label>
+                        <input type="url" class="form-control" id="txtVideo">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </form>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Modal de login -->
+    <div class="modal fade" id="mdlLogin" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmLogin">
+                        <div class="form-group">
+                            <label for="txtUsername">Username</label>
+                            <input type="text" class="form-control" id="txtUsername" placeholder="Enter username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPassword">Password</label>
+                            <input type="password" class="form-control" id="txtPassword" placeholder="Enter password" />
+                        </div>
+                        <div class="float-right">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Register -->
+    <div class="modal fade" id="mdlRegister" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmRegister">
+                        <div class="form-group">
+                            <label for="txtUsernameRegister">Username</label>
+                            <input type="text" class="form-control" id="txtUsernameRegister"
+                                placeholder="Enter username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPasswordRegister">Password</label>
+                            <input type="password" class="form-control" id="txtPasswordRegister"
+                                placeholder="Enter password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPasswordRegister2">Confirm Password</label>
+                            <input type="password" class="form-control" id="txtPasswordRegister2"
+                                placeholder="Enter password" />
+                        </div>
+                        <div class="float-right">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script type="module" src="../js/views/navbarView.js"></script>
+    <script type="module" src="../js/views/newBandView.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
