@@ -4,8 +4,8 @@ const myCatalog = document.querySelector("#myCatalog")
 const btnFilter = document.querySelector("#btnFilter")
 btnFilter.addEventListener("click", function(){
     const txtName = document.querySelector("#txtName").value 
-    const sltGenre = document.querySelector("#sltGenre").value
-    renderCatalog(txtName, sltGenre)
+    const sltCountry = document.querySelector("#sltCountry").value
+    renderCatalog(txtName, sltCountry)
 })
 
 renderCatalog()
@@ -13,17 +13,17 @@ renderCatalog()
 /**
  * 
  * @param {string} txtName Nome do monumento
- * @param {string} sltGenre Genero de musica que a banda 
+ * @param {string} sltCountry País do monumento
  */
 
 
 
-function renderCatalog(txtName ="", sltGenre ="") {
+function renderCatalog(txtName ="", sltCountry ="") {
     let result = ""
     let i = 0
     for (const mon of mons) {
 
-        if ((sltGenre !=="" && mon.genre !==sltGenre) 
+        if ((sltCountry !=="" && mon.country !==sltCountry) 
             ||
             (txtName !=="" && !mon.name.startsWith(txtName)) 
             ) {
@@ -45,7 +45,7 @@ function renderCatalog(txtName ="", sltGenre ="") {
                 <img src="${mon.photo}" class="card-img-top">
                 <div class="card-body">
                 <h5 class="card-title">${mon.name}</h5>
-                <p class="card-text">${mon.genre}</p>
+                <p class="card-text">${mon.country}</p>
                 <a href="#" class="btn btn-success">Ver mais</a>
                 <a href="#" class="btn btn-danger">Remover</a>
                 </div>
@@ -56,6 +56,14 @@ function renderCatalog(txtName ="", sltGenre ="") {
         if (i % 3 == 0) {
             result += `</div>`
         }
+        // Só adiciona botão de "Remover" a um utilizador autenticado
+        if (sessionStorage.getItem("loggedUser")) {
+            result += `<button id="${mon.name}" class="btn btn-danger remove">Remover</button>`
+        }
+        result += ` 
+           
+    `
+        
 
     }
     myCatalog.innerHTML = result
