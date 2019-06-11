@@ -88,4 +88,4 @@ document.querySelector("#btnFilter").addEventListener("click", function () {
 document.querySelector("#btnSort").addEventListener("click", function () {
     sortMons()
     renderCatalog()
-}) */
+}) 
